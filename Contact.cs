@@ -1,3 +1,4 @@
+using System;
 namespace Contacts {
     class Contact {
         public string FirstName{get; set;}

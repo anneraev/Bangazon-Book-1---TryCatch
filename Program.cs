@@ -62,9 +62,13 @@ namespace trycatch
         {
             Contact contact = addressBook.GetByEmail(email);
             Console.WriteLine("----------------------------");
+            try {
             Console.WriteLine($"Name: {contact.FullName}");
             Console.WriteLine($"Email: {contact.Email}");
             Console.WriteLine($"Address: {contact.Address}");
+            } catch(NullReferenceException){
+                Console.WriteLine("Error: A contact has missing info.");
+            }
         }
     }
 }
